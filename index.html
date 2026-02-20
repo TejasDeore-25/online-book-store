@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Book Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <h2 class="logo">BookStore</h2>
+
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#books">Books</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="#" onclick="showContact()">Contact</a></li>
+        <li><a href="#" id="authLink">Login</a></li>
+    </ul>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search books...">
+    </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Welcome to Online Book Store</h1>
+    <p>Find the best programming books here</p>
+    <button class="btn" onclick="window.location.href='#books'">Shop Now</button>
+</section>
+
+<!-- Books Section -->
+<section class="books" id="books">
+    <h2>Popular Books</h2>
+
+    <div class="book-container">
+
+        <!-- Books -->
+        <div class="book-card" id="c">
+            <img src="images/c.jpg">
+            <h3>C Programming</h3>
+            <p class="price">₹299</p>
+            <button class="btn" onclick="addToCart('C Programming', 299)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="cpp">
+            <img src="images/cpp.jpg">
+            <h3>C++ Programming</h3>
+            <p class="price">₹349</p>
+            <button class="btn" onclick="addToCart('C++ Programming', 349)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="java">
+            <img src="images/java.jpg">
+            <h3>Java Programming</h3>
+            <p class="price">₹399</p>
+            <button class="btn" onclick="addToCart('Java Programming', 399)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="python">
+            <img src="images/python.jpg">
+            <h3>Python Programming</h3>
+            <p class="price">₹450</p>
+            <button class="btn" onclick="addToCart('Python Programming', 450)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="html">
+            <img src="images/html.jpg">
+            <h3>HTML & CSS</h3>
+            <p class="price">₹250</p>
+            <button class="btn" onclick="addToCart('HTML & CSS', 250)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="ai">
+            <img src="images/ai.jpg">
+            <h3>Artificial Intelligence</h3>
+            <p class="price">₹500</p>
+            <button class="btn" onclick="addToCart('Artificial Intelligence', 500)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="ml">
+            <img src="images/ml.jpg">
+            <h3>Machine Learning</h3>
+            <p class="price">₹550</p>
+            <button class="btn" onclick="addToCart('Machine Learning', 550)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="js">
+            <img src="images/js.jpg">
+            <h3>JavaScript Programming</h3>
+            <p class="price">₹380</p>
+            <button class="btn" onclick="addToCart('JavaScript Programming', 380)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="react">
+            <img src="images/react.jpg">
+            <h3>React JS</h3>
+            <p class="price">₹420</p>
+            <button class="btn" onclick="addToCart('React JS', 420)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="node">
+            <img src="images/node.jpg">
+            <h3>Node JS</h3>
+            <p class="price">₹410</p>
+            <button class="btn" onclick="addToCart('Node JS', 410)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="php">
+            <img src="images/php.jpg">
+            <h3>PHP Programming</h3>
+            <p class="price">₹300</p>
+            <button class="btn" onclick="addToCart('PHP Programming', 300)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="mysql">
+            <img src="images/mysql.jpg">
+            <h3>MySQL Database</h3>
+            <p class="price">₹320</p>
+            <button class="btn" onclick="addToCart('MySQL Database', 320)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="datastructures">
+            <img src="images/ds.jpg">
+            <h3>Data Structures</h3>
+            <p class="price">₹450</p>
+            <button class="btn" onclick="addToCart('Data Structures', 450)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="algorithms">
+            <img src="images/algo.jpg">
+            <h3>Algorithms</h3>
+            <p class="price">₹480</p>
+            <button class="btn" onclick="addToCart('Algorithms', 480)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="android">
+            <img src="images/android.jpg">
+            <h3>Android Development</h3>
+            <p class="price">₹500</p>
+            <button class="btn" onclick="addToCart('Android Development', 500)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="ios">
+            <img src="images/ios.jpg">
+            <h3>iOS Development</h3>
+            <p class="price">₹520</p>
+            <button class="btn" onclick="addToCart('iOS Development', 520)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="cyber">
+            <img src="images/cyber.jpg">
+            <h3>Cyber Security</h3>
+            <p class="price">₹550</p>
+            <button class="btn" onclick="addToCart('Cyber Security', 550)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="cloud">
+            <img src="images/cloud.jpg">
+            <h3>Cloud Computing</h3>
+            <p class="price">₹530</p>
+            <button class="btn" onclick="addToCart('Cloud Computing', 530)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="aws">
+            <img src="images/aws.jpg">
+            <h3>AWS Guide</h3>
+            <p class="price">₹600</p>
+            <button class="btn" onclick="addToCart('AWS Guide', 600)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="git">
+            <img src="images/git.jpg">
+            <h3>Git and GitHub</h3>
+            <p class="price">₹350</p>
+            <button class="btn" onclick="addToCart('Git and GitHub', 350)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="django">
+            <img src="images/django.jpg">
+            <h3>Django Framework</h3>
+            <p class="price">₹470</p>
+            <button class="btn" onclick="addToCart('Django Framework', 470)">Add to Cart</button>
+        </div>
+
+        <div class="book-card" id="flask">
+            <img src="images/flask.jpg">
+            <h3>Flask Framework</h3>
+            <p class="price">₹390</p>
+            <button class="btn" onclick="addToCart('Flask Framework', 390)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Online Book Store | Micro Project</p>
+</footer>
+
+<script>
+
+// Login check
+if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "auth.html";
+}
+
+// Login/Logout control
+const authLink = document.getElementById("authLink");
+
+authLink.textContent = "Logout";
+
+authLink.onclick = function () {
+    localStorage.removeItem("loggedIn");
+    alert("Logged out successfully!");
+    window.location.href = "auth.html";
+};
+
+// Live Search
+document.getElementById("searchInput").addEventListener("input", function(e) {
+
+    let value = e.target.value.toLowerCase();
+    let books = document.querySelectorAll(".book-card");
+
+    books.forEach(book => {
+
+        let title = book.querySelector("h3").textContent.toLowerCase();
+
+        if (title.includes(value))
+            book.style.display = "block";
+        else
+            book.style.display = "none";
+
+    });
+
+});
+
+// Add to Cart Function
+function addToCart(name, price)
+{
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({
+        name: name,
+        price: price
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(name + " added to cart successfully!");
+}
+
+</script>
+
+</body>
+</html>
